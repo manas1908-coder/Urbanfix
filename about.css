@@ -1,0 +1,98 @@
+.about-hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #b0c4cc;
+    line-height: 1.6;
+}
+
+.section-title {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
+    margin: 60px 0 40px;
+}
+
+.sdg-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 5%;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.sdg-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    opacity: 0; 
+    transform: translateY(30px);
+}
+
+.sdg-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sdg-card:hover {
+    border-color: #00f5d4;
+    transform: translateY(-10px);
+}
+
+.sdg-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #00f5d4;
+    margin-bottom: 15px;
+}
+
+.sdg-card h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.sdg-card p {
+    color: #b0c4cc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.mission-section {
+    background: #050505;
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.mission-content h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.mission-content p {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    color: #cfd8dc;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}

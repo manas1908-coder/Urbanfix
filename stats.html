@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanFix - City Statistics</title>
+    <link rel="stylesheet" href="stats.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">UrbanFix</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="report.html">Report Problem</a>
+            <a href="stats.html" class="active">Stats</a>
+            <a href="about.html">About Us</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>City Impact Dashboard</h1>
+        <p>Real-time data on how we are fixing the city, together.</p>
+    </header>
+
+    <div class="dashboard-container">
+        
+        <div class="stats-row">
+            <div class="stat-card">
+                <h3>Total Issues Solved</h3>
+                <div class="number" data-target="1245">0</div>
+                <div class="sub-text">+12 today</div>
+            </div>
+            <div class="stat-card">
+                <h3>Pending Tasks</h3>
+                <div class="number warning-text" data-target="42">0</div>
+                <div class="sub-text">High Priority</div>
+            </div>
+            <div class="stat-card">
+                <h3>Fastest Response</h3>
+                <div class="number text-small">1h 15m</div>
+                <div class="sub-text">Record set yesterday</div>
+            </div>
+            <div class="stat-card">
+                <h3>Community Users</h3>
+                <div class="number" data-target="5800">0</div>
+                <div class="sub-text">Active Citizens</div>
+            </div>
+        </div>
+
+        <div class="charts-row">
+            <div class="chart-card large">
+                <h3>Monthly Development Progress</h3>
+                <canvas id="developmentChart"></canvas>
+            </div>
+            
+            <div class="chart-card small">
+                <h3>Problem Distribution</h3>
+                <canvas id="problemTypeChart"></canvas>
+            </div>
+        </div>
+
+        <div class="activity-row">
+            <div class="chart-card full-width">
+                <h3>Live Activity Feed</h3>
+                <table class="activity-table">
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Issue</th>
+                            <th>Location</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge solved">Solved</span></td>
+                            <td>Broken Streetlight</td>
+                            <td>Sector 4, Main Road</td>
+                            <td>10 mins ago</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td>Pothole Reported</td>
+                            <td>Greenwood Avenue</td>
+                            <td>25 mins ago</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge process">In Progress</span></td>
+                            <td>Water Leakage</td>
+                            <td>Downtown Circle</td>
+                            <td>1 hour ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="stats.js"></script>
+</body>
+</html>

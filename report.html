@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Issue</title>
+    <link rel="stylesheet" href="report.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+   <nav class="navbar">
+        <div class="logo">UrbanFix</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="report.html">Report Problem</a>
+            <a href="stats.html" class="active">Stats</a>
+            <a href="about.html">About Us</a>
+        </div>
+    </nav>
+
+    <div class="report-hero">
+        <h1>Report an Urban Issue</h1>
+        <p>Your report helps make the city safer and more efficient.</p>
+    </div>
+
+    <section class="form-section">
+        <form id="reportForm">
+            
+            <div class="form-group">
+                <label>Problem Type <span class="required">*</span></label>
+                <div class="select-wrapper">
+                    <select required>
+                        <option value="" disabled selected>Select a category...</option>
+                        <option value="pothole">Pothole / Road Damage</option>
+                        <option value="streetlight">Broken Streetlight</option>
+                        <option value="garbage">Garbage / Sanitation</option>
+                        <option value="water">Water Leakage</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Problem Title <span class="required">*</span></label>
+                <input type="text" placeholder="e.g., Deep pothole on Main St." required>
+            </div>
+
+            <div class="form-group">
+                <label>Description <span class="required">*</span></label>
+                <textarea rows="4" placeholder="Describe the issue in detail..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Location <span class="required">*</span></label>
+                <div class="input-icon-wrapper">
+                    <input type="text" placeholder="Area, landmark, or street name" required>
+                    <i class="fa-solid fa-location-dot icon"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Urgency Level <span class="required">*</span></label>
+                <div class="radio-group-styled">
+                    <label class="radio-card">
+                        <input type="radio" name="urgency" value="low" required>
+                        <span class="card-content">Low</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="urgency" value="medium">
+                        <span class="card-content">Medium</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="urgency" value="high">
+                        <span class="card-content">High</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Upload Image (Optional)</label>
+                <div class="file-upload-box">
+                    <input type="file" id="fileInput" class="file-input-hidden">
+                    <label for="fileInput" class="file-label">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span>Click to upload image</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Contact Email (Optional)</label>
+                <input type="email" placeholder="For updates on this issue">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Report</button>
+        </form>
+
+        <div id="successMessage" class="success hidden">
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h2>Report Submitted!</h2>
+            <p>Thank you. Our team will verify this issue shortly.</p>
+            <a href="index.html" class="home-btn">Back to Home</a>
+        </div>
+    </section>
+  <script src="report.js"></script>
+</body>
+</html>
